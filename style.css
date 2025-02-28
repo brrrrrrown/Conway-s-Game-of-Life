@@ -1,127 +1,87 @@
+
 * {
-   margin: 0;
-   padding: 0;
-   box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Work Sans', sans-serif;
 }
 
-:root {
-
-   /* Colors */
-
-   --White: hsl(0, 0%, 100%);
-   --Light-pink: hsl(275, 100%, 97%);
-   --Grayish-purple: hsl(292, 16%, 49%);
-   --Dark-purple: hsl(292, 42%, 14%);
-   
-   /* fonts */
-
-   @font-face {
-      font-family: 'Work Sans'; 
-      src: url('./assets/fonts/WorkSans-VariableFont_wght.ttf') format('truetype'); 
-      font-weight: 100 900; 
-      font-style: normal;
-   }
-
-   --font-size: 16px;
-   --font-weight-regular: 400;
-   --font-weight-medium: 500;
-   --font-weight-bold: 700;
-}
 
 body {
-   font-family: 'Work Sans', sans-serif;
-   font-size: var(--font-size);
-   background-color: var(--Light-pink); 
-   
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #0d0d0d; 
+    color: white;
 }
 
+/* Controls  Buttons */
 
-/* container */
-
-.container {
-
-   max-width: 1440px; 
-   /* height: 100vh; */
-   margin: 0 auto;
-   display: flex;
-   flex-direction: column;
-   padding-bottom: 60px;
-  
+.controls {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 25px;
+    justify-content: center;
 }
 
-.container div {
-   margin: 0 auto;
-}
+/*  Buttons */
+button {
 
-   
-/* FAQs and star */
+    width: 100px;  
+    height: 100px;
 
-.main {
+    font-size: 12px; 
+    font-weight: bold;
 
-   display: flex;
-   justify-content: left;
-   align-items: center;
+    background: black;
+    color: white;
 
-}
+    border: none;
+    border-radius: 50%;
 
-/* form of header-question-answer */
+    box-shadow: 0px 0px 15px rgba(170, 0, 255, 0.7); 
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
 
-form {
-
-   width: auto;
-   
-   background-color: var(--White);
-   border-radius: 10px;
-   padding: 15px;
-   margin: 0 auto;
-   margin-top: -60px;
-   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-   overflow: hidden; 
-   
-}
-
-/* question */ 
-
-.question {
-
-   color: var(--Dark-purple);
-   font-weight: var(--font-weight-bold);
-   font-size: var(--font-size);
-
-   padding: 20px;
-
-   display: flex;
-   flex-direction: row;
-   align-items: center;
-   justify-content: space-between;
-   
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 
 }
 
-/* answer */ 
+/* Hover Effect  */
 
-
-
-.answer {
-
-   color: var(--Dark-purple);
-   font-weight: var(--font-weight-medium);
-   font-size: var(--font-size);
-
-   display: flex;
-   flex-direction: row;
-   align-items: center;
-   justify-content: space-between;
-
-   padding: 20px ;
-   display: none;
-   
-   
+button:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 0px 22px rgba(190, 0, 255, 1); 
 }
 
+/* Click Effect*/
 
-
-.hide {
-   display: none;
+button:active {
+    transform: scale(0.95);
+    box-shadow: 0px 0px 8px rgba(200, 0, 255, 0.5); 
 }
+
+/*  Canvas */
+
+canvas {
+    border: 6px solid rgba(170, 0, 255, 0.5);
+    background-color: #1a1a1a;
+    width: 90vw;
+    height: 90vh;
+    max-width: 600px;
+    max-height: 400px;
+    box-shadow: 0px 0px 30px rgba(170, 0, 255, 1); 
+    border-radius: 25px;
+    transition: all 0.5s ease-in-out;
+}
+
+canvas:hover {
+    box-shadow: 0px 0px 40px rgba(200, 0, 255, 1); 
+}
+
 
